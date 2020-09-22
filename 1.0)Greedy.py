@@ -1,3 +1,4 @@
+#For knapsack problem
 class KnapsackItems():
     def __init__(self, ind,  val, weight):
         self.wt = weight
@@ -5,6 +6,7 @@ class KnapsackItems():
         self.index = ind
         self.net = val/weight
 
+        
 def ActivitySelection(arr):
     arr = sorted(arr, key=lambda x: x[1])
     Ans = []
