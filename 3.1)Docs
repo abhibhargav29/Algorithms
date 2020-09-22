@@ -1,1 +1,8 @@
+#Dynamic Programming
 
+This file has some common DP solvable problems. These are LCS, edit distance and coin change problems.
+--LCS is Longest Common subsequence problem, given two strings, we need to find the longest subsequence between them. 
+  A subsequence is formed by picking 0 or more characters in order from a string or an array.
+--In Coin change problem we have some given coins and a sum and we need to find number of ways that sum can be obtained.
+--Edit distance problem has two strings and we need to find minimum total operations that should be done to convert str1 to str2.
+  Operation can be deletion, insertion or replacing of a charcter.
