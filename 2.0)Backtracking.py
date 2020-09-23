@@ -4,7 +4,7 @@ def printMatrix(Mat):
     for i in range(len(Mat)):
         print(" ".join(map(str, Mat[i])))
 
-#Rat in a maze
+#Rat in a maze------------------------------------------------------------------------------------
 n = int(input("Enter rows: "))
 Maze = []
 print("Draw Maze: ")
@@ -44,7 +44,7 @@ else:
     print("Rat can not solve the maze")
 
 
-#N Queen Problem
+#N Queen Problem----------------------------------------------------------------------------------
 N = int(input("Enter N for N queen: "))
 board = [[0 for i in range(0,N)] for j in range(0,N)]
 
@@ -96,7 +96,7 @@ else:
     print("Queens can not be placed")
 
 
-#Sudoku Problem
+#Sudoku Problem----------------------------------------------------------------------------------
 size = int(input("Enter grid size: "))
 print("Enter grid(Zero for empty spots): ")
 Grid = []
