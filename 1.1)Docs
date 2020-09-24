@@ -1,6 +1,7 @@
 #Greedy Algorihtms
 
 This file has some greedy approaches to solve some common problems.
+
 --In Activity Selection problem, we have jobs with start and end time and we need to perform maximum number of jobs. 
 If one job's time interval overlaps with any other job's interval, only one of them can be formed.
   
