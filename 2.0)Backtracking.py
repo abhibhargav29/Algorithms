@@ -1,21 +1,25 @@
 from math import sqrt
 
+#For printing matrix in all problems as all of them include matrix.
 def printMatrix(Mat):
     for i in range(len(Mat)):
         print(" ".join(map(str, Mat[i])))
 
 #Rat in a maze------------------------------------------------------------------------------------
+#Input
 n = int(input("Enter rows: "))
 Maze = []
 print("Draw Maze: ")
 for i in range(n):
     Maze.append(list(map(int, input().split())))
 
+#Th check for backtracking
 def checkCell(i, j, Maze, n):
     if(i<n and j<n and Maze[i][j]==1):
         return True
     return False
 
+#The wrapper function
 def SolveMaze(Maze, n):
     solution = [[0 for i in range(n)] for j in range(n)]
     if(SolveMazeUtil(0, 0, solution, n, Maze)==False):
@@ -24,6 +28,7 @@ def SolveMaze(Maze, n):
         printMatrix(solution)
         return True
 
+#The recursive function
 def SolveMazeUtil(i, j, solution, n, Maze):
     if(i==n-1 and j==n-1 and checkCell(i,j,Maze,n)):
         solution[i][j] = 1
@@ -37,6 +42,7 @@ def SolveMazeUtil(i, j, solution, n, Maze):
         solution[i][j]=0
     return False
 
+#Output
 print()
 if(SolveMaze(Maze, n)):
     print("Yes, the rat can solve the maze with the above path")
@@ -45,9 +51,11 @@ else:
 
 
 #N Queen Problem----------------------------------------------------------------------------------
+#Input
 N = int(input("Enter N for N queen: "))
 board = [[0 for i in range(0,N)] for j in range(0,N)]
 
+#Backtracking check
 def checkQueen(row, col, board):
     N=len(board)
     i=0
@@ -72,6 +80,7 @@ def checkQueen(row, col, board):
 
     return True
 
+#Wrapper function
 def placeQueen(N, board):
     if(placeQueenUtil(0, board, N)==False):
         return False
@@ -79,6 +88,7 @@ def placeQueen(N, board):
         printMatrix(board)
         return True
 
+#Recursive function
 def placeQueenUtil(col, board, N):
     if(col==N):
         return True
@@ -90,6 +100,7 @@ def placeQueenUtil(col, board, N):
             board[i][col]=0
     return False
 
+#Output
 if(placeQueen(N, board)):
     print("The queens can be placed as above")
 else:
@@ -97,12 +108,14 @@ else:
 
 
 #Sudoku Problem----------------------------------------------------------------------------------
+#Input
 size = int(input("Enter grid size: "))
 print("Enter grid(Zero for empty spots): ")
 Grid = []
 for i in range(size):
     Grid.append(list(map(int, input().split())))
 
+#Backtracking Check
 def checkNum(row, col, num, Grid):
     n = len(Grid)
     for i in range(n):
@@ -117,6 +130,7 @@ def checkNum(row, col, num, Grid):
                 return False
     return True
 
+#Actual function
 def fillSudoku(Grid):
     n = len(Grid)
     i = 0
@@ -140,6 +154,7 @@ def fillSudoku(Grid):
             Grid[i][j]=0
     return False
 
+#Output
 print()
 if(fillSudoku(Grid)):
     print("Solved grid: ")
