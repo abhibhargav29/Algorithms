@@ -1,8 +1,13 @@
 #Dynamic Programming
 
-This file has some common DP solvable problems. These are LCS, edit distance and coin change problems.
---LCS is Longest Common subsequence problem, given two strings, we need to find the longest subsequence between them. 
-  A subsequence is formed by picking 0 or more characters in order from a string or an array.
+This file has some common DP solvable problems.
+--LCS is Longest Common subsequence problem, given two strings, we need to find the longest subsequence between them. A subsequence is formed by picking 
+  0 or more characters in order from a string or an array.
 --In Coin change problem we have some given coins and a sum and we need to find number of ways that sum can be obtained.
---Edit distance problem has two strings and we need to find minimum total operations that should be done to convert str1 to str2.
-  Operation can be deletion, insertion or replacing of a charcter.
+--Edit distance problem has two strings and we need to find minimum total operations that should be done to convert str1 to str2. Operation can be  deletion, 
+  insertion or replacing of a charcter.
+--In LIS problem, we have an array and we need to print Longest increasing subsequence in it. It is solved with DP as well as divide and conqer.
+--Min Coins problem has an array of coins and we need to make a value form them using minimum coins.
+--Min jumps problem gives us an array and we need to find in how many min jumps we can reach from 0th index to last index, Where we start from 0 and when on an
+  index we can make jumps to (index, index + arr[index]) cells.
+--0/1 Knapsack problem is same as the fractional knapsack except that now we can only put an item or not put it, no fractions allowed.
