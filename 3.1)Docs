@@ -11,3 +11,6 @@ This file has some common DP solvable problems.
 --Min jumps problem gives us an array and we need to find in how many min jumps we can reach from 0th index to last index, Where we start from 0 and when on an
   index we can make jumps to (index, index + arr[index]) cells.
 --0/1 Knapsack problem is same as the fractional knapsack except that now we can only put an item or not put it, no fractions allowed.
+--Card Game
+--Egg Dropping
+--BST count
