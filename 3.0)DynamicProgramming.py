@@ -129,6 +129,47 @@ def Knapsack(prices, weights, capacity):
                 dp[i][j] = dp[i-1][j]
     return dp[n][capacity]
 
+def cardGame(arr):
+    n = len(arr)
+    dpmat = [[0]*n for i in range(n)]
+    for i in range(0,n-1):
+        dpmat[i][i+1] = max(arr[i],arr[i+1])
+    for gap in range(3,n):
+        i=0
+        while(i+gap<n):
+            j=i+gap
+            x = arr[i] + min(dpmat[i+2][j], dpmat[i+1][j-1])
+            y = arr[j] + min(dpmat[i][j-2], dpmat[i+1][j-1])
+            dpmat[i][j] = max(x, y)
+            i+=1
+    return dpmat[0][n-1]
+
+def EggDropping(floors, eggs):
+    trials = [[float('inf')]*eggs for i in range(floors+1)]
+    for i in range(0, eggs):
+        trials[0][i] = 0
+        trials[1][i] = 1
+    for i in range(2, floors+1):
+        trials[i][0] = i
+    for i in range(2, floors+1):
+        for j in range(1,eggs):
+            for x in range(1,i+1):
+                T = 1+max(trials[x-1][j-1], trials[i-x][j])
+                trials[i][j] = min(trials[i][j], T)
+    return trials[floors][eggs-1]
+
+def countBST(n):
+    if(n==0):
+        return 0
+    ans = [0]*(n+1)
+    ans[0] = 1
+    for i in range(1,n+1):
+        res=0
+        for j in range(0,i):
+            res+=ans[j]*ans[i-j-1]
+        ans[i] = res
+    return ans[n]
+
 #Longest common subsequence
 X = "AGGTAB"
 Y = "GXTXAYB"
@@ -162,3 +203,16 @@ val = [60, 100, 120]
 wt = [10, 20, 30] 
 W = 50 
 print("Value in Knapsack:",Knapsack(val, wt, W))
+
+#Optimal Strategy for game 
+arr3 = [ 20, 30, 2, 2, 2, 10] 
+print("Maximum sum in card game:", cardGame(arr3))
+
+#Eggs Dropping
+floors = 36
+eggs = 2
+print("Number of egg dropping trials:",EggDropping(floors, eggs))
+
+#Count BST
+n = 5
+print("Number of BST possible:",countBST(n))
