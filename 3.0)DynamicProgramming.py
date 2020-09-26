@@ -170,6 +170,37 @@ def countBST(n):
         ans[i] = res
     return ans[n]
 
+
+def SubsetSum(arr, sum):
+    n = len(arr)
+    SS = [[-1]*(n+1) for i in range(sum+1)]
+    for i in range(0,n+1):
+        SS[0][i] = 1
+    for i in range(1,sum+1):
+        SS[i][0] = 0
+    for i in range(1,sum+1):
+        for j in range(1,n+1):
+            if(i<arr[j-1]):
+                SS[i][j] = SS[i][j-1]
+            else:
+                SS[i][j] = SS[i][j-1] + SS[i-arr[j-1]][j-1]
+    return SS[sum][n]
+
+def matChainMultiplication(arr):
+    n = len(arr)
+    dp = [[-1]*n for i in range(n)]
+    for i in range(0,n-1):
+        dp[i][i+1] = 0
+    for gap in range(2,n):
+        i=0
+        while(i+gap<n):
+            j=i+gap
+            dp[i][j]= float('inf')
+            for k in range(i+1,j):
+                dp[i][j] = min(dp[i][j], dp[i][k] + dp[k][j] + arr[i]*arr[j]*arr[k])
+            i+=1
+    return dp[0][n-1]
+
 #Longest common subsequence
 X = "AGGTAB"
 Y = "GXTXAYB"
@@ -216,3 +247,12 @@ print("Number of egg dropping trials:",EggDropping(floors, eggs))
 #Count BST
 n = 5
 print("Number of BST possible:",countBST(n))
+
+#Subset sum
+arr = [2,3,5,1,4]
+sum = 4
+print(SubsetSum(arr,sum))
+
+#Matrix chain multiplication
+arr = [2, 1, 3, 4]
+print(matChainMultiplication(arr))
