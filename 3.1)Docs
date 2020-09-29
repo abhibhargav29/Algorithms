@@ -11,8 +11,11 @@ This file has some common DP solvable problems.
 --Min jumps problem gives us an array and we need to find in how many min jumps we can reach from 0th index to last index, Where we start from 0 and when on an
   index we can make jumps to (index, index + arr[index]) cells.
 --0/1 Knapsack problem is same as the fractional knapsack except that now we can only put an item or not put it, no fractions allowed.
---Card Game
---Egg Dropping
---BST count
---Subset sum
---Matrix chain multiplication
+--Card Game is a very tricky dp problem where there are even number of cards placed with each card having a number on it. We have to pick the cards from either end 
+  of the card stack and then our opponents pick, we need to have the maximum possible sum assuming that our opponent is as smart as us and we get to pick first.
+--In Egg Dropping problem, we have some eggs and a number of floors, we need to find the threshold floor from where dropping the egg will break it but from each 
+  floor below it, the egg does not break on dropping, our problem is to find minimum number of drops we make to determine it.
+--In BST count problem we are given a number of nodes n and we need to find the maximum number of BST we can form from those nodes, the dp implementation is not the
+  best for this problem instead the catlan number can solve it in O(n) time but we still do it using dp as it is interesting.
+--Subset sum problem has an array and we need to find the maximum sum that can be obtained from the elements of this array as a set without taking in two consecutive elements.
+--Matrix chain multiplication 
