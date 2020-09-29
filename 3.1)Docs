@@ -17,5 +17,7 @@ This file has some common DP solvable problems.
   floor below it, the egg does not break on dropping, our problem is to find minimum number of drops we make to determine it.
 --In BST count problem we are given a number of nodes n and we need to find the maximum number of BST we can form from those nodes, the dp implementation is not the
   best for this problem instead the catlan number can solve it in O(n) time but we still do it using dp as it is interesting.
---Subset sum problem has an array and we need to find the maximum sum that can be obtained from the elements of this array as a set without taking in two consecutive elements.
---Matrix chain multiplication 
+--Subset sum problem has an array and we need to find the maximum sum that can be obtained from the some elements of this array without taking in two consecutive elements.
+--Matrix chain multiplication has an array where each two adjacent numbers tell us the dimensions of a matrix. We have to multiply these matrices but we need to
+  do it in a way that the number of elemnts multiplied is minimized. ex-- [4, 2, 7] means we multiply a 4*2 matrix with a 2*7 matrix and we will have to multiply all
+  elements as there are only two matrices and no other way possible.
