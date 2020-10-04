@@ -4,5 +4,5 @@
 --Tower of hanoi problem is a famous problem where we have three rods A, B, C and each rod can hold beads, Initially all beads are in A and stacked
   in decreasing order of size. We have to move the beads to rod C such that they remain in same configuration, we can move one bead at a time and
   big bead cannot be placed on top of a smaller bead at any step. We are given number of beads and we need to write each step.
---In josephus problem we have given n number of prisoners waiting death sentence standing in a circle and we start from 0th persona and execute each kth
+--In josephus problem we have given n number of prisoners waiting death sentence standing in a circle and we start from 0th person and execute each kth
   person until only one person remian, we need to find where should josephus stand in order to avoid execution given n and k.
