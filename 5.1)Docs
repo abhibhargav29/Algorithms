@@ -1,12 +1,9 @@
 #Greedy Algorihtms
 
-This file has some greedy approaches to solve some common problems.
-
---In Activity Selection problem, we have jobs with start and end time and we need to perform maximum number of jobs. 
-If one job's time interval overlaps with any other job's interval, only one of them can be formed.
-  
---In fractional knapsack problem, we have a bag and some items with given value and weight, the bag has fixed weight capacity and we need to 
-maximise value in the bag. The items cam be put in the bag in fractions.
-
---Job sequencing problem has certain jobs with their deadlines and profit on each job, each job takes 1 unit of time, we start work from time 
-0 and try to complete jobs such that we have maximum profit
+This file has greedy approaches to solve some common problems.
+--In Activity Selection problem, we have jobs with start and end time and we need to perform maximum number of jobs. If one job's time interval overlaps with any other 
+  job's interval, only one of them can be formed.
+--In fractional knapsack problem, we have a bag and some items with given value and weight, the bag has fixed weight capacity and we need to maximise value in the bag. 
+  The items cam be put in the bag in fractions.
+--Job sequencing problem has certain jobs with their deadlines and profit on each job, each job takes 1 unit of time, we start work from time 0 and try to complete jobs 
+  such that we have maximum profit
