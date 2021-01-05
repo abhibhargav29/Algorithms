@@ -1,9 +1,9 @@
 #Backtracking Algorithms
 
 In this file we implement famous some backtracking algotithms.
---Rat in a Maze is a famous problem in which we have a maze as a matrix made up of 1 and 0, 1 means an allowed cell and 0 means a blocked cell.
-  The mouse is at the top left cell of matrix and he can move to the down or right cell if the cell is an allowed cell, we need to find whether the
-  mouse can make it to the end of maze which is at down right corner.
+--Rat in a Maze is a famous problem in which we have a maze as a matrix made up of 1 and 0, 1 means an allowed cell and 0 means a blocked cell. The mouse is at the top left cell 
+  of matrix and he can move to the down or right cell if the cell is an allowed cell, we need to find whether the mouse can make it to the end of the maze which is at the down 
+  right corner.
 --In N queens problem, we have to place N queens on a chessboard of size N*N such that no two queens attack each other and output no if its not possible
---Sudoku problem gives us a partially filled grid of size N^2(4,9,25) and we have to fill the cells following the rules of sudoku. The rules are, no number 
-  can be repeated in the same row or column and no number can be repeated in a grid of size N.
+--Sudoku problem gives us a partially filled grid of size N^2(4,9,25) and we have to fill the cells following the rules of sudoku. The rules are, no number can be repeated in 
+  the same row or column and no number can be repeated in a grid of size N.
